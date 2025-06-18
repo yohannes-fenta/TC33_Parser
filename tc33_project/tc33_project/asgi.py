@@ -1,5 +1,5 @@
 """
-ASGI config for TC33_Parser project.
+ASGI config for tc33_project project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'TC33_Parser.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tc33_project.settings')
 
 application = get_asgi_application()
