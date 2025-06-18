@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload TC-33 File</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        h1 { text-align: center; color: #333; }
+        form { display: flex; flex-direction: column; }
+        label { margin-bottom: 8px; font-weight: bold; }
+        input[type="file"] { margin-bottom: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+        .errorlist { color: red; list-style-type: none; padding: 0; margin: 0 0 10px 0; }
+        .helptext { font-size: 0.9em; color: #666; margin-top: -15px; margin-bottom: 15px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload TC-33 ASCII File</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Parse and Convert to Excel</button>
+        </form>
+    </div>
+</body>
+</html>
